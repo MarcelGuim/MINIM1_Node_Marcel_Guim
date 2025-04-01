@@ -91,6 +91,28 @@ const options = {
                         },
                     },
                 },
+                Valoracion: {
+                    type: 'object',
+                    required: ['user', 'calendar', 'valoracion', 'used'],
+                    properties: {
+                        user: {
+                            type: 'string',
+                            description: 'ID del usuario que realiza la valoración',
+                        },
+                        calendar: {
+                            type: 'string',
+                            description: 'ID del calendario al que pertenece la valoración',
+                        },
+                        valoracion: {
+                            type: 'number',
+                            description: 'Valor numérico de la valoración',
+                        },
+                        used: {
+                            type: 'boolean',
+                            description: 'Indica si la valoración ha sido utilizada',
+                        },
+                    },
+                },
                 Appointment: {
                     type: 'object',
                     required: ['inTime', 'outTime', 'place', 'title'], // Removed `isDeleted` from required
